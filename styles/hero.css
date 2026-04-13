@@ -1,1 +1,146 @@
-/* hero.css - Daniels Arias */
+/* hero.css - Persona 2 */
+
+@import url('https://fonts.googleapis.com/css2?family=Bayon&family=Jost:ital,wght@1,400&family=Poppins:wght@600&display=swap');
+
+/* ── BANNER SUPERIOR ── */
+.hero-top-banner {
+  background: #D0FF00;
+  text-align: center;
+  padding: 4px;
+  font-family: 'Jost', sans-serif;
+  font-style: italic;
+  font-size: 26px;
+  color: #0a0a0a;
+  letter-spacing: 1px;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(to bottom, #270149 0%, #0a0a0a 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* ── LOGO FONDO ── */
+.hero-bg-logo {
+  position: absolute;
+  right: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* ── IMAGEN ATLETA ── */
+.hero-atleta {
+  position: absolute;
+  right: 80px;
+  bottom: 0;
+  height: 95%;
+  z-index: 2;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* ── CONTENIDO TEXTO ── */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 0 60px;
+}
+
+.hero-aspire {
+  font-family: 'Bayon', sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.hero-titulo {
+  font-family: 'Bayon', sans-serif;
+  font-size: 100px;
+  color: white;
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.hero-titulo span {
+  color: #D0FF00;
+}
+
+/* ── BOTÓN ── */
+.hero-btn {
+  background: #D0FF00;
+  border: none;
+  padding: 20px 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0a0a0a;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-btn-flecha {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.hero-btn:hover {
+  background: white;
+}
+
+.hero-btn-flecha {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+/* ── PUNTOS ── */
+.hero-dots {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+  z-index: 4;
+}
+
+.hero-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero-dot.active {
+  background: white;
+}
+
+/* ── BANNER INFERIOR ── */
+.hero-bottom-banner {
+  background: #D0FF00;
+  padding: 14px;
+  text-align: center;
+  font-family: 'Bayon', sans-serif;
+  font-size: 36px;
+  color: #0a0a0a;
+  letter-spacing: 30px;
+  text-transform: uppercase;
+}
