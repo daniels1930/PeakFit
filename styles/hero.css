@@ -1,8 +1,7 @@
 /* hero.css - Daniels Arias */
-
 @import url('https://fonts.googleapis.com/css2?family=Bayon&family=Jost:ital,wght@1,400&family=Poppins:wght@600&display=swap');
 
-/* ── BANNER SUPERIOR ── */
+/* BANNER SUPERIOR */
 .hero-top-banner {
   background: #D0FF00;
   text-align: center;
@@ -14,7 +13,7 @@
   letter-spacing: 1px;
 }
 
-/* ── HERO ── */
+/* HERO */
 .hero {
   position: relative;
   width: 100%;
@@ -25,7 +24,7 @@
   align-items: center;
 }
 
-/* ── LOGO FONDO ── */
+/* LOGO FONDO */
 .hero-bg-logo {
   position: absolute;
   right: 150px;
@@ -36,7 +35,7 @@
   z-index: 1;
 }
 
-/* ── IMAGEN ATLETA ── */
+/* IMAGEN ATLETA */
 .hero-atleta {
   position: absolute;
   right: 80px;
@@ -46,7 +45,7 @@
   transition: opacity 0.4s ease-in-out;
 }
 
-/* ── CONTENIDO TEXTO ── */
+/* CONTENIDO TEXTO */
 .hero-content {
   position: relative;
   z-index: 3;
@@ -76,7 +75,7 @@
   color: #D0FF00;
 }
 
-/* ── BOTÓN ── */
+/* BOTÓN */
 .hero-btn {
   background: #D0FF00;
   border: none;
@@ -93,11 +92,6 @@
   gap: 16px;
 }
 
-.hero-btn-flecha {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-}
 .hero-btn:hover {
   background: white;
 }
@@ -108,7 +102,7 @@
   object-fit: contain;
 }
 
-/* ── PUNTOS ── */
+/* PUNTOS */
 .hero-dots {
   position: absolute;
   bottom: 60px;
@@ -133,7 +127,7 @@
   background: white;
 }
 
-/* ── BANNER INFERIOR ── */
+/* BANNER INFERIOR */
 .hero-bottom-banner {
   background: #D0FF00;
   padding: 14px;
@@ -144,9 +138,8 @@
   letter-spacing: 30px;
   text-transform: uppercase;
 }
-/* ── RESPONSIVE ── */
 
-/* ── TABLET (iPad ~768px–1024px) ── */
+/* TABLET */
 @media (max-width: 1024px) {
   .hero {
     height: 80vh;
@@ -183,7 +176,7 @@
   }
 }
 
-/* ── PHONE (≤767px) ── */
+/* PHONE */
 @media (max-width: 767px) {
   .hero-top-banner {
     font-size: 16px;

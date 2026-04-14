@@ -1,22 +1,19 @@
 // hero.js - Daniels Arias
-
 const app = document.getElementById("app")
-
 const slides = [
   {
     titulo: "NEW <span>COLLECTIONS</span><br>BY TOP BRAND.",
-    imagen: "./assets/images/hero-atleta-1.png"
+    imagen: "./assets/images/hero/hero-atleta-1.png"
   },
   {
     titulo: "PUSH YOUR <span>LIMITS</span><br>EVERY DAY.",
-    imagen: "./assets/images/hero-atleta-2.png"
+    imagen: "./assets/images/hero/hero-atleta-2.png"
   },
   {
     titulo: "GEAR UP FOR<br><span>GREATNESS.</span>",
-    imagen: "./assets/images/hero-atleta-3.png"
+    imagen: "./assets/images/hero/hero-atleta-3.png"
   }
 ]
-
 let slideActivo = 0
 
 // Banner superior
@@ -33,7 +30,7 @@ app.appendChild(hero)
 // Logo fondo
 const bgLogo = document.createElement("img")
 bgLogo.className = "hero-bg-logo"
-bgLogo.src = "./assets/images/hero-bg.png"
+bgLogo.src = "./assets/images/hero/hero-bg.png"
 hero.appendChild(bgLogo)
 
 // Imagen atleta
@@ -62,14 +59,11 @@ contenido.appendChild(titulo)
 // Botón
 const btn = document.createElement("button")
 btn.className = "hero-btn"
-
 const btnTexto = document.createElement("span")
 btnTexto.textContent = "See Now"
-
 const btnFlecha = document.createElement("img")
-btnFlecha.src = "./assets/images/flecha.png"
+btnFlecha.src = "./assets/images/hero/flecha.png"
 btnFlecha.className = "hero-btn-flecha"
-
 btn.appendChild(btnTexto)
 btn.appendChild(btnFlecha)
 contenido.appendChild(btn)
@@ -78,26 +72,21 @@ contenido.appendChild(btn)
 const dotsContainer = document.createElement("div")
 dotsContainer.className = "hero-dots"
 hero.appendChild(dotsContainer)
-
 slides.forEach((slide, i) => {
   const dot = document.createElement("button")
   dot.className = "hero-dot" + (i === 0 ? " active" : "")
   dot.addEventListener("click", () => {
     slideActivo = i
-
     titulo.style.opacity = "0"
     atleta.style.opacity = "0"
-
     setTimeout(() => {
       titulo.innerHTML = slide.titulo
       atleta.src = slide.imagen
-
       setTimeout(() => {
         titulo.style.opacity = "1"
         atleta.style.opacity = "1"
       }, 50)
     }, 400)
-
     document.querySelectorAll(".hero-dot").forEach((d, j) => {
       d.classList.toggle("active", j === i)
     })
