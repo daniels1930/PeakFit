@@ -1,1 +1,256 @@
-/* footer.css - Jhon Jairo Aguilar */
+@import url("https://fonts.googleapis.com/css2?family=Bayon&family=Jost:ital,wght@0,400;1,400&family=Poppins:wght@600&display=swap");
+
+body {
+  background: black;
+  color: white;
+  font-family: "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  
+  
+}
+
+.collections-title {
+  text-align: left;
+  font-size: 70px;
+  font-family: "Bayon", sans-serif;
+  letter-spacing: 2px;
+
+  margin: 40px;
+  font-weight: 100;
+}
+
+.collections-title span {
+  color: #d0ff00;
+}
+
+.collections-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.overlay h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.line {
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: white;
+  transition:
+    width 0.4s ease,
+    background 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.2);
+}
+
+.card:hover h3 {
+  color: #d0ff00;
+}
+
+.card:hover .line {
+  width: 200px;
+  background: #d0ff00;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.card:hover::after {
+  background: rgba(0, 0, 0, 0.4);
+}
+/* Footer Styles */
+.footer-top {
+  text-align: center;
+  padding: 40px 20px;
+  line-height: 1.6;
+  
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+ font-style: normal;
+}
+
+.logo-box img {
+  width: 600px;
+  margin-bottom: 40px;
+}
+
+.footer-bottom {
+  background: #d0ff00;
+  color: black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 30px;
+  gap: 20px;
+  font-family: poppins, sans-serif;
+ 
+
+}
+
+.footer-bottom ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.footer-bottom h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-bottom li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-bottom li:hover {
+  color: #6a8306;
+  scale: 1.01; 
+}
+
+
+.social i {
+  margin-right: 10px;
+  font-size: 34px;
+  cursor: pointer;
+  
+}
+
+.social i:hover {
+  color: #6a8306;
+  scale: 1.1;
+}
+/* Responsive Styles */
+
+/* ==========================
+   📱 TABLET (≤ 900px)
+========================== */
+@media (max-width: 900px) {
+
+  .collections-title {
+    font-size: 50px;
+  }
+
+  .collections-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .card {
+    height: 400px;
+  }
+
+  /* footer */
+  .footer-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo-box img {
+    width: 300px; 
+  }
+}
+
+/* ==========================
+   📱 MOBILE (≤ 500px)
+========================== */
+@media (max-width: 500px) {
+
+  body {
+    margin: 20px; /* menos margen en celular */
+  }
+
+  /* collections */
+  .collections-title {
+    font-size: 38px;
+    padding-left: 0;
+  }
+
+  .collections-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    height: 280px;
+  }
+
+  .overlay h3 {
+    font-size: 22px;
+  }
+
+  .line {
+    width: 40px;
+  }
+
+  /* footer */
+  .footer-bottom {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+  }
+
+  .footer-top {
+    padding: 30px 10px;
+  }
+
+  .logo-box img {
+    width: 150px;
+  }
+
+  .footer-bottom h4 {
+    font-size: 16px;
+  }
+
+  .footer-bottom li {
+    font-size: 13px;
+  }
+
+  .social i {
+    font-size: 26px;
+  }
+}
