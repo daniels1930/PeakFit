@@ -45,27 +45,38 @@ searchBox.appendChild(btnBuscar);
 const icons = document.createElement("div");
 icons.classList.add("icons");
 
-const iconos = [ // array de iconos
-    { src: "assets/images/Header/Carrito.png", alt: "carrito" },
-    { src: "assets/images/Header/Favoritos.png", alt: "favoritos" },
-    { src: "assets/images/Header/Campana.png", alt: "campana" }
+const iconos = [
+    { src: "assets/images/Header/Carrito.png", alt: "carrito", link: "html/cart.html" },
+    { src: "assets/images/Header/Favoritos.png", alt: "favoritos", link: "html/favorites.html" },
+    { src: "assets/images/Header/Campana.png", alt: "campana", link: "html/notifications.html" }
 ];
 
+
 iconos.forEach(icono => { // recorro cada icono
+
+    const link = document.createElement("a");  // creo link
+    link.href = icono.link;
+
     const img = document.createElement("img"); // creo imagen
-    img.src = icono.src; // asigno imagen
-    img.alt = icono.alt; // asigno alt
-    icons.appendChild(img); // lo agrego al contenedor
+    img.src = icono.src;
+    img.alt = icono.alt; 
+
+    link.appendChild(img);  // lo agrego al contenedor
+    icons.appendChild(link);  // lo agrego al contenedor
+
 });
+
 
 // agrego iconos e imagenes a la fila de arriba
 topHeader.appendChild(logo);
 topHeader.appendChild(searchBox);
 topHeader.appendChild(icons);
 
+
 // Fila de abajo
 const bottomHeader = document.createElement("nav");
 bottomHeader.classList.add("bottom-header");
+
 
 // Links
 const navLinks = document.createElement("div");
@@ -78,11 +89,13 @@ navLinks.classList.add("nav-links");
     navLinks.appendChild(a);
 });
 
+
 // Usuario
-const userSection = document.createElement("div");
+const userSection = document.createElement("div"); // contenedor usuario
 userSection.classList.add("user-section");
 
-const userInfo = document.createElement("div");
+const userInfo = document.createElement("a"); // contenedor info usuario
+userInfo.href = "html/usuario.html";
 userInfo.classList.add("user-info");
 
 const userImg = document.createElement("img");
@@ -96,12 +109,15 @@ const myProducts = document.createElement("div"); //boton productos
 myProducts.classList.add("my-products"); // clase productos
 myProducts.textContent = "My products"; // texto botón
 
+
 userSection.appendChild(userInfo); // sección usuario
 userSection.appendChild(myProducts); // clase usuario
+
 
 // Armo la fila de abajo
 bottomHeader.appendChild(navLinks);
 bottomHeader.appendChild(userSection);
+
 
 // Armo el header completo y lo agrego a la pagina
 header.appendChild(topHeader);
