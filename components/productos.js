@@ -1,9 +1,9 @@
-// productos.js - Jeronimo Escobar
+const contenedor = document.getElementById("products");
 
 fetch("../productos.json")
   .then(res => res.json())
   .then(data => {
-    document.body.innerHTML += crearSeccion(data);
+    contenedor.innerHTML = crearSeccion(data);
   });
 
 function crearSeccion(productos) {
@@ -28,7 +28,7 @@ function crearSeccion(productos) {
       BUY. SELL. TRAIN. GROW.
     </div>
 
-    <div class="hero">
+    <div class="productos-hero">
       <img src="../assets/images/productos/onepeak.png" alt="">
       <div class="hero-text">
       </div>

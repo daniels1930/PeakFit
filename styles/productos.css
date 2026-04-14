@@ -2,13 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Bayon&display=swap');
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom, #17002c, #000);
-  color: white;
-}
-
 .productos {
   padding: 60px;
 }
@@ -66,9 +59,10 @@ body {
   left: 0;
   width: 100%;
   background: black;
-  padding: 8px;
+  padding: 8px 44px 8px 8px; /* padding-right deja espacio para el icono */
   opacity: 0;
   transition: opacity 0.3s ease;
+  box-sizing: border-box;
 }
 
 .card:hover .info {
@@ -89,11 +83,13 @@ body {
   position: absolute;
   bottom: 10px;
   right: 10px;
+  z-index: 2; /* siempre encima del .info */
 }
 
 .icono img {
   width: 35px;
   height: auto;
+  display: block;
 }
 
 /* VIEW ALL */
@@ -102,6 +98,11 @@ body {
   margin: 60px 0;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.view-all:hover {
+  color:#6a8306;
+  scale: 1.05;
 }
 
 /* BANNER */
@@ -116,88 +117,117 @@ body {
   font-size: 40px;
 }
 
-/* HERO */
-.hero {
+/* PRODUCTOS HERO */
+.productos-hero {
   position: relative;
   margin-top: 0px;
 }
 
-.hero img {
+.productos-hero img {
   width: 100vw;
   height: auto;
 }
 
 .banner,
-.hero {
+.productos-hero {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
-/* tablet */ 
+
+/* TABLET */
 @media (max-width: 1024px) {
 
+  .productos {
+    padding: 40px;
+  }
+
   .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .img1, .img2 {
-    height: 280px;
+    height: 320px;
   }
 
   .titulo {
     font-size: 28px;
-  }
-
-  .hero-text h1 {
-    font-size: 36px;
   }
 
   .banner {
     font-size: 24px;
     letter-spacing: 5px;
   }
+
+  .icono img {
+    width: 30px;
+  }
+
+  .info {
+    padding: 8px 40px 8px 8px;
+  }
+
+  .nombre {
+    font-size: 12px;
+  }
+
+  .precio {
+    font-size: 12px;
+  }
 }
 
-/* mobil */ 
+/* MÓVIL */
 @media (max-width: 600px) {
 
   .productos {
-    padding: 20px;
+    padding: 16px;
   }
 
   .grid {
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 10px; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .img1, .img2 {
-    height: 260px;
+    height: 200px;
   }
 
   .titulo {
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
+    margin-bottom: 14px;
   }
 
   .view-all {
-    font-size: 14px;
+    font-size: 13px;
+    margin: 30px 0;
   }
 
   .banner {
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 3px;
     padding: 10px;
   }
 
-  .hero-text {
-    top: 15%;
-    left: 5%;
-  }
-
-  .hero-text h1 {
-    font-size: 28px;
-  }
-
+  /* icono más pequeño en móvil */
   .icono img {
-    width: 28px;
+    width: 24px;
+  }
+
+  .icono {
+    bottom: 8px;
+    right: 8px;
+  }
+
+  /* info no se mete detrás del icono */
+  .info {
+    padding: 6px 36px 6px 6px;
+  }
+
+  .nombre {
+    font-size: 11px;
+  }
+
+  .precio {
+    font-size: 11px;
   }
 }

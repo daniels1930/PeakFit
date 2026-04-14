@@ -1,7 +1,7 @@
 // header.js - Jisell Castro
 
 // Div principal de la pagina
-const app = document.getElementById("app");
+
 
 // Creo el header
 const header = document.createElement("header");
