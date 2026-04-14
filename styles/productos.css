@@ -1,1 +1,203 @@
-/* productos.css - Jhon Jairo Aguilar */
+/* productos.css - Jeronimo Escobar */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Bayon&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #17002c, #000);
+  color: white;
+}
+
+.productos {
+  padding: 60px;
+}
+
+.titulo {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* IMÁGENES */
+.img-container {
+  position: relative;
+}
+
+.img1, .img2 {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.img2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* HOVER IMAGEN */
+.card:hover .img2 {
+  opacity: 1;
+}
+
+.card:hover .img1 {
+  opacity: 0;
+}
+
+/* INFO (APARECE SOLO EN HOVER) */
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  padding: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .info {
+  opacity: 1;
+}
+
+.nombre {
+  font-size: 13px;
+}
+
+.precio {
+  font-size: 13px;
+  color: #ccff00;
+}
+
+/* ICONO */
+.icono {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.icono img {
+  width: 35px;
+  height: auto;
+}
+
+/* VIEW ALL */
+.view-all {
+  text-align: center;
+  margin: 60px 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* BANNER */
+.banner {
+  background: #ccff00;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Bayon', sans-serif;
+  letter-spacing: 6px;
+  margin-top: 40px;
+  font-size: 40px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  margin-top: 0px;
+}
+
+.hero img {
+  width: 100vw;
+  height: auto;
+}
+
+.banner,
+.hero {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+/* tablet */ 
+@media (max-width: 1024px) {
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
+
+  .img1, .img2 {
+    height: 280px;
+  }
+
+  .titulo {
+    font-size: 28px;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .banner {
+    font-size: 24px;
+    letter-spacing: 5px;
+  }
+}
+
+/* mobil */ 
+@media (max-width: 600px) {
+
+  .productos {
+    padding: 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+  }
+
+  .img1, .img2 {
+    height: 260px;
+  }
+
+  .titulo {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .view-all {
+    font-size: 14px;
+  }
+
+  .banner {
+    font-size: 18px;
+    letter-spacing: 3px;
+    padding: 10px;
+  }
+
+  .hero-text {
+    top: 15%;
+    left: 5%;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .icono img {
+    width: 28px;
+  }
+}
