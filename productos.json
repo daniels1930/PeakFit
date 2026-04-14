@@ -1,0 +1,50 @@
+[
+  {
+    "nombre": "Active Tennis Dress",
+    "precio": "$58.00",
+    "img1": "img/img1.png",
+    "img2": "img/img12.png"
+  },
+  {
+    "nombre": "Training Tank",
+    "precio": "$35.00",
+    "img1": "img/img2.png",
+    "img2": "img/img22.png"
+  },
+  {
+    "nombre": "Yoga Leggings",
+    "precio": "$60.00",
+    "img1": "img/img3.png",
+    "img2": "img/img32.png"
+  },
+  {
+    "nombre": "Long Sleeve Top",
+    "precio": "$45.00",
+    "img1": "img/img4.png",
+    "img2": "img/img42.png"
+  },
+  {
+    "nombre": "Men Shorts",
+    "precio": "$40.00",
+    "img1": "img/img5.png",
+    "img2": "img/img52.png"
+  },
+  {
+    "nombre": "Training Shirt",
+    "precio": "$38.00",
+    "img1": "img/img6.png",
+    "img2": "img/img62.png"
+  },
+  {
+    "nombre": "Sport T-Shirt",
+    "precio": "$42.00",
+    "img1": "img/img7.png",
+    "img2": "img/img72.png"
+  },
+  {
+    "nombre": "Running Shorts",
+    "precio": "$36.00",
+    "img1": "img/img8.png",
+    "img2": "img/img82.png"
+  }
+]
