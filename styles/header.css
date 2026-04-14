@@ -139,18 +139,18 @@
   cursor: pointer;
 }
 
-/* RESPONSIVE HEADER*/
 
-@media (max-width: 768px) {
+/* Responsive de tablet */
+@media (max-width: 1024px) {
 
   .top-header {
     flex-wrap: wrap;
-    padding: 14px 20px;
+    padding: 14px 40px;
     gap: 10px;
   }
 
   .logo img {
-    width: 100px;
+    width: 150px;
   }
 
   .search-box {
@@ -159,20 +159,20 @@
   }
 
   .icons img {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
   }
 
   .bottom-header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px 20px;
+    padding: 10px 40px;
     gap: 10px;
   }
 
   .nav-links {
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 24px;
   }
 
   .user-section {
@@ -180,6 +180,7 @@
   }
 
 }
+
 
 /* Responsive para celular */
 @media (max-width: 480px) {
@@ -215,4 +216,3 @@
   }
 
 }
-
