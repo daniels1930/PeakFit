@@ -41,6 +41,7 @@ collectionsData.forEach((item) => {
 collectionsSection.appendChild(title);
 collectionsSection.appendChild(container);
 
+/**/
 const footer = document.getElementById("footer");
 footer.innerHTML = `
 
@@ -52,14 +53,14 @@ footer.innerHTML = `
       </div>
 
       <p>
-        PeakFit is a fitness focused e-commerce and marketplace built for a driven and growing fit community.
+        PeakFit is a fitness focused e-commerce and marketplace built for a driven and growing fit community. It's more than just an online store it’s a platform where users can buy high quality gym accessories, apparel, supplements, and lifestyle products, while also selling their own fitness brands and creations. PeakFit connects passionate athletes, creators, and entrepreneurs in one powerful ecosystem designed to support performance, growth, and community.
       </p>
     </div>
 
     <div class="footer-bottom">
 
       <div>
-        <h4>Follow Us</h4>
+        <h4 >Follow Us</h4>
         <div class="social">
           <i class="fab fa-facebook"></i>
           <i class="fab fa-instagram"></i>
@@ -70,26 +71,29 @@ footer.innerHTML = `
       <div>
         <h4>About Us</h4>
         <ul>
-          <li><i class="fas fa-user"></i> Who We Are</li>
-          <li><i class="fas fa-truck"></i> Shipping Terms</li>
-          <li><i class="fas fa-file-alt"></i> Terms & Conditions</li>
-          <li><i class="fas fa-undo"></i> Returns</li>
+          <li> Who We Are</li>
+          <li> Shipping Terms</li>
+          <li> Terms & Conditions</li>
+          <li> Returns & warranty </li>
+          <li> Data Policy</li>
         </ul>
       </div>
 
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><i class="fas fa-envelope"></i> support@peakfit.com</li>
-          <li><i class="fab fa-whatsapp"></i> +1 347 829 5612</li>
+          <li> Email: support@peakfit.com</li>
+          <li> WhatsApp: +1 347 829 5612</li>
+          <li> Phone: +1 347 829 5600</li>
         </ul>
       </div>
 
       <div>
         <h4>Help</h4>
         <ul>
-          <li><i class="fas fa-question-circle"></i> FAQs</li>
-          <li><i class="fas fa-ruler"></i> Size Guide</li>
+          <li> Where is my order?</li>
+          <li> Size Guide</li>
+            <li> PQRs</li>
         </ul>
       </div>
 
