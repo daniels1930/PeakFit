@@ -29,7 +29,7 @@ function crearSeccion(productos) {
     </div>
 
     <div class="hero">
-      <img src="../img/onepeak.png" alt="">
+      <img src="../assets/images/productos/onepeak.png" alt="">
       <div class="hero-text">
       </div>
     </div>
@@ -44,7 +44,7 @@ function crearCards(lista) {
       
       <div class="img-container">
         <img class="img1" src="../${p.img1}" alt="">
-        <img class="img2" src="../${p.img2}" alt="">
+        <img class="img2" src="../${p.img2}" alt=""> 
       </div>
 
       <div class="info">
@@ -53,7 +53,7 @@ function crearCards(lista) {
       </div>
 
       <div class="icono">
-        <img src="../img/shop_button.png" alt="">
+        <img src="../assets/images/productos/shop_button.png" alt="">
       </div>
 
     </div>
