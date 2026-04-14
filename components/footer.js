@@ -1,3 +1,4 @@
+
 // footer.js - Jhon Jairo Aguilar
 const collectionsData = [
   { title: "Men", img: "assets/images/footer/Men.jpg" },
@@ -100,3 +101,4 @@ footer.innerHTML = `
     </div>
   </div>
 `;
+
