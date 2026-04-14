@@ -1,15 +1,15 @@
 const contenedor = document.getElementById("products");
 
-fetch("../productos.json")
-  .then(res => res.json())
-  .then(data => {
+// 1. CORRECCIÓN DEL FETCH (Ruta desde la raíz)
+fetch("productos.json")
+  .then((res) => res.json())
+  .then((data) => {
     contenedor.innerHTML = crearSeccion(data);
   });
 
 function crearSeccion(productos) {
   return `
   <section class="productos">
-
     <h2 class="titulo">Top sports sellers</h2>
 
     <div class="grid">
@@ -29,22 +29,22 @@ function crearSeccion(productos) {
     </div>
 
     <div class="productos-hero">
-      <img src="../assets/images/productos/onepeak.png" alt="">
+      <img src="assets/images/productos/onepeak.png" alt="">
       <div class="hero-text">
       </div>
     </div>
-
   </section>
   `;
 }
 
 function crearCards(lista) {
-  return lista.map(p => `
+  return lista
+    .map(
+      (p) => `
     <div class="card">
-      
       <div class="img-container">
-        <img class="img1" src="../${p.img1}" alt="">
-        <img class="img2" src="../${p.img2}" alt=""> 
+        <img class="img1" src="${p.img1}" alt="">
+        <img class="img2" src="${p.img2}" alt=""> 
       </div>
 
       <div class="info">
@@ -53,9 +53,10 @@ function crearCards(lista) {
       </div>
 
       <div class="icono">
-        <img src="../assets/images/productos/shop_button.png" alt="">
+        <img src="assets/images/productos/shop_button.png" alt="">
       </div>
-
     </div>
-  `).join("");
+  `,
+    )
+    .join("");
 }
